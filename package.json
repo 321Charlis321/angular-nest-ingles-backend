@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/main",
-    "start:tempo": "nest start",
+    "start:tempo": "node dist/main",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -27,6 +27,8 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "mongoose": "^7.5.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"

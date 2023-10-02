@@ -9,7 +9,7 @@ export class FrasesController {
 
   @Post()
   create(@Body() createFraseDto: CreateFraseDto) {
-    console.log(createFraseDto);
+    // console.log(createFraseDto);
 
     return this.frasesService.create(createFraseDto);
   }
