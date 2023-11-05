@@ -13,7 +13,7 @@ async function bootstrap() {
   );
 
   app.enableCors();//Esto es importante para que no se tenga fallas a la hora entre la comunicacion del backend y fronted
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
 

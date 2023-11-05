@@ -1,19 +1,26 @@
-import { IsString } from "class-validator";
+import { IsInt, IsPositive, IsString, Min, MinLength } from "class-validator";
+import { v4 } from 'uuid'
 
 export class CreateFraseDto {
 
+    @IsInt()
+    @IsPositive()
+    @Min(1)
+    no: number
+
     @IsString()
+    @MinLength(1)
     ingles: string;
 
     @IsString()
-    spanish: string;
+    readonly spanish: string;
 
     @IsString()
-    opcion1: null;
+    readonly opcion1: string;
 
     @IsString()
-    opcion2: string;
+    readonly opcion2: string;
 
     @IsString()
-    opcion3: string;
+    readonly opcion3: string;
 }

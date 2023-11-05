@@ -10,6 +10,8 @@ import { FrasesModule } from './frases/frases.module';
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI, {
       dbName: process.env.MONGO_DB_NAME,
+      // useCreateIndex: true,
+      autoIndex: true
     }),
     AuthModule,
     FrasesModule
